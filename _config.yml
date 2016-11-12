@@ -4,12 +4,12 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
-url: "http://username.github.io"
+url: "http://jupedsim.github.io"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
-url: "http://www.jupedsim.org"
-baseurl: "/JuPedSim"
+#url: "http://www.jupedsim.org"
+#baseurl: "/JuPedSim"
 
 # Of course don't forget to change the username and projectname to YOUR username and project
 
@@ -48,7 +48,7 @@ avatar: "/img/avatar-icon.png"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: dev team
+  name: Mohcine Chraibi
   email: "info@jupedsim.org"
   #facebook: yourname
   github: JuPedSim
