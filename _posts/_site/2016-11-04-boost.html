@@ -1,0 +1,37 @@
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<p>One of  <code class="highlighter-rouge">JuPedSim</code>’s <a href="http://jupedsim.github.io/JuPedSim/2016-11-03-Requirements/">requirements</a> is Boost.</p>
+
+<p>In order to make sure that this library is properly installed,  this <em>minimal working</em> example can be very handy.</p>
+
+<div class="language-c++ highlighter-rouge"><pre class="highlight"><code><span class="cp">#include &lt;boost/geometry.hpp&gt;
+#include &lt;boost/geometry/geometries/point_xy.hpp&gt;
+#include &lt;boost/geometry/geometries/polygon.hpp&gt;
+#include &lt;iostream&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">boost</span><span class="o">::</span><span class="n">geometry</span><span class="p">;</span>
+
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Using Boost "</span>
+          <span class="o">&lt;&lt;</span> <span class="n">BOOST_VERSION</span> <span class="o">/</span> <span class="mi">100000</span>     <span class="o">&lt;&lt;</span> <span class="s">"."</span>  <span class="c1">// major version
+</span>          <span class="o">&lt;&lt;</span> <span class="n">BOOST_VERSION</span> <span class="o">/</span> <span class="mi">100</span> <span class="o">%</span> <span class="mi">1000</span> <span class="o">&lt;&lt;</span> <span class="s">"."</span>  <span class="c1">// minor version
+</span>          <span class="o">&lt;&lt;</span> <span class="n">BOOST_VERSION</span> <span class="o">%</span> <span class="mi">100</span>                <span class="c1">// patch level
+</span>          <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Using the following <a href="https://cst.version.fz-juelich.de/jupedsim/jpscore/snippets/3">CMakeLists.txt</a> 
+the compilation of the aforementioned file goes like</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>cmake .
+make
+run ./main
+</code></pre>
+</div>
+
+<p>It is also possible to compile the code directly without passing by <code class="highlighter-rouge">CMake</code>, however since it is used with <code class="highlighter-rouge">JuPedSim</code>, it is a 
+good idea to test it here too.</p>
+

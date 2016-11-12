@@ -1,0 +1,86 @@
+<p>In order to compile <code class="highlighter-rouge">JuPedSim</code> it is necessary to first install the required libraries.</p>
+
+<h2 id="supported-compilers">Supported compilers</h2>
+
+<p>Any compiler with support for C++11.</p>
+
+<p>Tested with</p>
+
+<ul>
+  <li><code class="highlighter-rouge">g++</code> (linux/osx)</li>
+  <li><code class="highlighter-rouge">clang</code> (osx)</li>
+  <li>Visual Studio 2013 (Windows)</li>
+</ul>
+
+<h2 id="required-tools">Required tools</h2>
+
+<ul>
+  <li>cmake: see this <a href="https://www.johnlamp.net/cmake-tutorial-1-getting-started.html">tutorial</a> for a brief overview.</li>
+  <li>Python (highly recommended): needed to plot results of analysis.</li>
+</ul>
+
+<h2 id="required-libraries">Required libraries</h2>
+
+<ul>
+  <li><a href="http://www.boost.org/">Boost library</a>: necessary for <code class="highlighter-rouge">jpscore</code> and <code class="highlighter-rouge">jpsreport</code></li>
+  <li><a href="https://www.qt.io/">Qt</a>: necessary for <code class="highlighter-rouge">jpseditor</code> and <code class="highlighter-rouge">jpsvis</code></li>
+  <li><a href="http://www.vtk.org/">VTK</a>: necessary for <code class="highlighter-rouge">jpsvis</code></li>
+</ul>
+
+<hr />
+
+<p>Note:
+<code class="highlighter-rouge">jpseditor</code> and <code class="highlighter-rouge">jpsvis</code> come with Windows executables and  <code class="highlighter-rouge">dmg</code>-files for Mac users. 
+Therefore, a compilation of these two packages may not be needed.</p>
+
+<h3 id="install-qt-and-vtk-for-os-x--el-capitan">Install Qt and VTK for OS X  (El Capitan)</h3>
+
+<p>Assuming you have <a href="http://brew.sh/">Homebrew</a>. Otherwise, these commands 
+can be slightly adapted to <a href="https://www.macports.org/">MacPorts</a></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>brew update
+# qt
+brew install qt
+# vtk
+brew install vtk --with-qt --without-python --with-python3 --without-boost  --build-from-source
+</code></pre>
+</div>
+
+<h3 id="install-qt-and-vtk--for-linux-ubuntu-debian">Install Qt and VTK  for Linux (Ubuntu, Debian)</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install libmgl-qt5
+sudo apt-get install libvtk5-dev
+sudo apt-get install libvtk5.8-qt4
+</code></pre>
+</div>
+
+<p>Alternatively, you can download the latest version of QT <a href="https://www.qt.io/download/">here</a>
+and the latest version of VTK <a href="http://www.vtk.org/download/">here</a> and compile them manually.</p>
+
+<h2 id="install-boost-at-least-v157">Install Boost (at least v1.57)</h2>
+
+<p>You can compile boost as follows:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nv">boost_version</span><span class="o">=</span>1.61.0
+<span class="nv">boost_dir</span><span class="o">=</span>boost_1_61_0
+
+wget http://downloads.sourceforge.net/project/boost/boost/<span class="k">${</span><span class="nv">boost_version</span><span class="k">}</span>/<span class="k">${</span><span class="nv">boost_dir</span><span class="k">}</span>.tar.gz <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> tar xfz <span class="k">${</span><span class="nv">boost_dir</span><span class="k">}</span>.tar.gz <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> rm <span class="k">${</span><span class="nv">boost_dir</span><span class="k">}</span>.tar.gz <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="k">${</span><span class="nv">boost_dir</span><span class="k">}</span> <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> ./bootstrap.sh --with-libraries<span class="o">=</span>filesystem,test,system<span class="se">\</span>
+    <span class="o">&amp;&amp;</span> ./b2 --without-python --prefix<span class="o">=</span>/usr -j 4 <span class="nv">link</span><span class="o">=</span>shared runtime-link<span class="o">=</span>shared install <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> <span class="nb">cd</span> .. <span class="o">&amp;&amp;</span> rm -rf <span class="k">${</span><span class="nv">boost_dir</span><span class="k">}</span> <span class="o">&amp;&amp;</span> ldconfig
+</code></pre>
+</div>
+
+<p>or if you are a <code class="highlighter-rouge">brew</code> user :</p>
+
+<pre><code class="language-`">brew install boost
+</code></pre>
+
+<hr />
+
+<p>Note: Debian’s and Ubuntu’s install manager offer an old version of Boost, which is not supported by <code class="highlighter-rouge">JuPedSim</code>. Therefore, you need compile it.</p>
+
+<p>You can test your Boost installation by using this <a href="2016-11-04-boost.html">minimal example</a>.</p>

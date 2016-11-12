@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+618d9ac9666e27a62e0b9d52384b8d4e CMakeFiles/jpsvis_automoc
+f0ed2d45363f1209082fdd17ff9518fc qrc_icons.cxx
+f3d64a3dc828a0e2099ceb20a10a9ee2 ui_mainwindow.h
+b295b1588e5c2a8ae1f308640c8bd9a5 ui_settings.h

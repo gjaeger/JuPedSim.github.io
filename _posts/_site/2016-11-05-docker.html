@@ -1,0 +1,49 @@
+<p><code class="highlighter-rouge">JuPedSim</code> offers also up to date Docker images. 
+Basically, we package <code class="highlighter-rouge">JuPedSim</code> and all its dependencies in a lightweight image, which can just be used without any <em>hassle</em>.</p>
+
+<p>For these who wonder what the Docker is, here is what Docker.io says:</p>
+
+<blockquote>
+  <p>Docker is an open-source project to easily create lightweight, portable, self-sufficient containers 
+from any application. 
+The same container that a developer builds and tests on a laptop can run at scale, in production, 
+on VMs, bare metal, OpenStack clusters, public clouds and more.</p>
+</blockquote>
+
+<h2 id="linux">Linux</h2>
+
+<p>For Linux systems please check this excellent blog: 
+<a href="http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/">Running GUI apps with Docker</a></p>
+
+<h2 id="mac-osx">Mac OSX</h2>
+
+<p>start <code class="highlighter-rouge">socat</code> to expose local xquartz socket on a TCP port:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
+</code></pre>
+</div>
+
+<p>Then in a new window pass the <code class="highlighter-rouge">DISPLAY</code> with your own IP-address to the container by running</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker run -it -e DISPLAY=YOUR_IP:0 -v /some/host/folder/:/tmp jupedsim/jupedsim
+</code></pre>
+</div>
+
+<p>See also this <a href="https://github.com/docker/docker/issues/8710">issue</a></p>
+
+<p>This will mount <code class="highlighter-rouge">/some/host/folder</code> in docker’s <code class="highlighter-rouge">/tmp</code>, which is useful to exchange data between your machine and the docker container.</p>
+
+<p>There seems to be an issue after updating XQuartz: <code class="highlighter-rouge">libGL error: failed to load driver: swrast </code></p>
+
+<p>Downgrading to 2.7.8 solves the problem.</p>
+
+<p>Note: You can get you IP by typing in the terminal <code class="highlighter-rouge">ifconfig</code>.</p>
+
+<p><img src="doc/docker_jpsvis.png" alt="docker" /></p>
+
+<h2 id="windows">Windows</h2>
+
+<p>Works only with Windows 10.</p>
+
+<p>@todo: How? need someone with a windows machine to check this.</p>
+

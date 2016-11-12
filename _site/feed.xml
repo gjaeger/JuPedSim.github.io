@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JuPedSim</title>
+    <description>Simulating pedestrians with state of the art models</description>
+    <link>http://localhost:5002</link>
+    <atom:link href="http://localhost:5002/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Docker</title>
+        <description>
+          using JuPedSim's docker images - 
+          JuPedSim offers also up to date Docker images. Basically, we package JuPedSim and all its dependencies in a lightweight image, which can just be used without any hassle. For these who wonder what the Docker is, here is what Docker.io says: Docker is an open-source project to easily create lightweight,...
+        </description>
+        <pubDate>Sat, 05 Nov 2016 00:00:00 +0000</pubDate>
+        <link>http://localhost:5002/2016-11-05-docker.html</link>
+        <guid isPermaLink="true">http://localhost:5002/2016-11-05-docker.html</guid>
+      </item>
+    
+      <item>
+        <title>Test Boost</title>
+        <description>
+          minimal working example - 
+          One of JuPedSim’s requirements is Boost. In order to make sure that this library is properly installed, this minimal working example can be very handy. #include &amp;lt;boost/geometry.hpp&amp;gt; #include &amp;lt;boost/geometry/geometries/point_xy.hpp&amp;gt; #include &amp;lt;boost/geometry/geometries/polygon.hpp&amp;gt; #include &amp;lt;iostream&amp;gt; using namespace boost::geometry; int main() { std::cout &amp;lt;&amp;lt; &quot;Using Boost &quot; &amp;lt;&amp;lt; BOOST_VERSION / 100000 &amp;lt;&amp;lt; &quot;.&quot;...
+        </description>
+        <pubDate>Fri, 04 Nov 2016 00:00:00 +0000</pubDate>
+        <link>http://localhost:5002/2016-11-04-boost.html</link>
+        <guid isPermaLink="true">http://localhost:5002/2016-11-04-boost.html</guid>
+      </item>
+    
+      <item>
+        <title>Requirements</title>
+        <description>
+          Dependencies of JuPedSim - 
+          In order to compile JuPedSim it is necessary to first install the required libraries. Supported compilers Any compiler with support for C++11. Tested with g++ (linux/osx) clang (osx) Visual Studio 2013 (Windows) Required tools cmake: see this tutorial for a brief overview. Python (highly recommended): needed to plot results of...
+        </description>
+        <pubDate>Thu, 03 Nov 2016 00:00:00 +0000</pubDate>
+        <link>http://localhost:5002/2016-11-03-requirements.html</link>
+        <guid isPermaLink="true">http://localhost:5002/2016-11-03-requirements.html</guid>
+      </item>
+    
+      <item>
+        <title>Quick start</title>
+        <description>
+          Compiling the code - 
+          To install JuPedSim there are three steps to follow: 1. Get the code git clone https://github.com/JuPedSim/JuPedSim.git cd JuPedSim git submodule update --init --recursive 2. Check the requirements Some packages and libraries are required to get JuPedSim compiled. See also requirements. You can check your system with make -f Makefile.cmake check...
+        </description>
+        <pubDate>Wed, 02 Nov 2016 00:00:00 +0000</pubDate>
+        <link>http://localhost:5002/2016-11-02-quickstart.html</link>
+        <guid isPermaLink="true">http://localhost:5002/2016-11-02-quickstart.html</guid>
+      </item>
+    
+      <item>
+        <title>About</title>
+        <description>
+          Jülich pedestrian simulator - 
+          Open source framework for simulating, analyzing and visualizing pedestrian dynamics. Goal The primary goal of JuPedSim is to provide students and researchers with a framework to investigate pedestrian dynamics and focus on research, i.e. development and validation of new models or model features, analysis of experiments and proper visualization of...
+        </description>
+        <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
+        <link>http://localhost:5002/2016-11-01-introduction.html</link>
+        <guid isPermaLink="true">http://localhost:5002/2016-11-01-introduction.html</guid>
+      </item>
+    
+  </channel>
+</rss>
