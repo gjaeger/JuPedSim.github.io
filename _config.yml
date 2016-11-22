@@ -43,6 +43,13 @@ navbar-links:
 # Remove this parameter if you don't want an image in the navbar
 avatar: "/img/avatar-icon.png"
 
+pandoc:
+  extensions:
+    - normalize
+    - smart
+    - mathjax
+#n    - csl: _styles/apa.csl
+#    - bibliography: bibliography/references.bib
 # --- Footer options --- #
 
 # Change all these values or delete the ones you don't want.
@@ -193,6 +200,7 @@ prose:
 
 gems:
   - jekyll-paginate
+  - jekyll-pandoc
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189

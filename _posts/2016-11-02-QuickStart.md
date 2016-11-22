@@ -5,7 +5,20 @@ subtitle: Compiling the code
 permalink: 2016-11-02-quickstart.html
 ---
 
-To install `JuPedSim` there are three steps to follow: 
+HHHH
+
+$$\alpha=\beta$$
+
+2. 
+
+\\(\alpha\\)
+
+3. 
+
+$\beta$
+
+
+To install `JuPedSim` there are three steps to followsss: 
 
 # 1. Get the code
 
