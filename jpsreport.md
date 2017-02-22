@@ -8,6 +8,6 @@ subtitle: Analysis module of trajectories obtained from video recordings as well
 
 ##  Documentation 
 
-[here](http://jupedsim.github.io/jpsreport/).
+[here](http://jupedsim.org/jpsreport/).
 
 
