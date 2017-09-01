@@ -16,10 +16,13 @@ Visualize the trajectory files (simulation and experiments) and geometry files p
 - XML based input files
 - Drag and Drop
 
+## Dependencies 
+- Qt
+- VTK
 
 ## Get the source code 
 
-- The project is being developed in a [Gitlab repository](https://cst.version.fz-juelich.de/jupedsim/jpsvis). 
+- The project is being developed in a [Gitlab repository](https://gitlab.version.fz-juelich.de/jupedsim/jpsvis). 
 - Our [GitHub repository](https://github.com/JuPedSim/jpsvis) is used to host selected tags and releases.
 
 So, get the code from Gitlab and the releases from GitHub. :-)
