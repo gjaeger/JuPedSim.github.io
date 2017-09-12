@@ -37,7 +37,7 @@ which was established over the last years. See for example
 `JuPedSim` consists of four modules which are loosely coupled and can be used independently at the moment. These are:
 
 
-1. `jpscore`: the core module computing the trajectories. See [list](http://jupedsim.github.io/jpscore/models/operativ) of implemented models.
+1. `jpscore`: the core module computing the trajectories. See [list](http://www.jupedsim.org/jpscore/2016-11-01-operativ) of implemented models.
 2. `jpsreport`: a tool for analyzing the trajectories and validating the model. 
    It implements a couple of measurement methods including the [Voronoi-method](http://dx.doi.org/10.1016/j.physa.2009.12.015) for calculating the density.
 3. `jpsvis`: a tool for visualizing the input (geometry) and output (trajectories) data.
@@ -80,7 +80,7 @@ make -f Makefile.cmake check release
 We are heavily working on this project which means that:
 
 - It’s not done. We will be releasing new enhancements, bug fixes etc.
-- We love your support. If you find any errors or have suggestions, please write an issue in our [issue-tracker](https://cst.version.fz-juelich.de/jupedsim/jpsvis/issues). We will try hard to fix it.
+- We love your support. If you find any errors or have suggestions, please write an issue in our [issue-tracker](https://gitlab.version.fz-juelich.de/jupedsim/jpscore/issues). We will try hard to fix it.
 - Be patient. We are scientists and PhD/master students. Therefore, we primarily care about our research and theses. 
 
 ## Contact
