@@ -223,7 +223,7 @@ JuPedSim specifically disclaims any warranties, including, but not limited to, t
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \chapter{Introduction}
-% \input{_tex/jpscore/2016-11-01-introduction.tex}
+\input{_tex/jpscore/2016-11-01-introduction.tex}
 % \section{Quickstart}
 % \input{_tex/jpscore/2016-11-02-QuickStart.tex}
 
@@ -231,15 +231,17 @@ JuPedSim specifically disclaims any warranties, including, but not limited to, t
 % \newpage
 % \subsection{Contributing}
 % \input{_tex/2016-11-04-Contributing.tex}
-% \newpage
-% \subsection{Requirements}
-% \input{_tex/2016-11-03-Requirements.tex}
-% \newpage
+ \newpage
+\section{Requirements}
+\input{_tex/jpscore/2016-11-03-Requirements.tex}
+\newpage
 % \subsection{Boost}
 % \input{_tex/2016-11-04-boost.tex}
 %=============================================================
  \chapter{JPScore}
 \section{File formats}
+\texttt{jpscore} needs as input an ``inifile'' and a geometry file. B successful simulation it produces a trajectory file.
+ 
 \subsection{Inifile}
 \input{_tex/jpscore/2016-11-01-inifile.tex}
 \newpage
@@ -267,12 +269,14 @@ JuPedSim specifically disclaims any warranties, including, but not limited to, t
 %=============================================================
 \chapter{JPSreport}
 \section{File formats}
+\texttt{jpscore} needs as input an ``inifile'', a geometry file and a trajectory file.
+
 \subsection{Inifile}
 \input{_tex/jpsreport/2016-11-01-inifile.tex}
 \newpage
 \subsection{Trajectory file}
 \input{_tex/jpsreport/2016-11-03-trajectory.tex}
-
+\newpage
 \section{Measurement methods}
 \subsection{Method A}
 \input{_tex/jpsreport/2016-11-04-method_A.tex}
