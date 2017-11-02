@@ -61,8 +61,6 @@ and the latest version of VTK [here](http://www.vtk.org/download/) and compile t
 
 ## Install Boost (at least v1.59)
 
-## Install Boost (at least v1.57)
-
 
 ### Linux 
 
@@ -105,7 +103,7 @@ sudo port install boost
 
 ### Windows 
 
-```
+```bash
 bootstrap
 b2  variant=release --build-type=complete 
 ```
