@@ -12,6 +12,11 @@ To install `JuPedSim` there are three steps to follow:
 
 ```bash
  git clone https://github.com/JuPedSim/JuPedSim.git
+```
+
+Note: it is very important to update submodules, otherwise the they will be empty!
+
+```bash
  cd JuPedSim
  git submodule update --init --recursive
 ```
@@ -24,6 +29,8 @@ You can check your system with
 ```bash 
  make -f Makefile.cmake check
 ```
+
+`CMake` will eventually report any missing packages. Please fix these errors/warnings first **before** proceeding with the compilation of `JuPedSim`.
 
 # 3. Compile the code
 
