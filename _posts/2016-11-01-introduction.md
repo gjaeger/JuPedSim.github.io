@@ -54,7 +54,7 @@ our [YouTube channel](https://www.youtube.com/channel/UCKS8w8CUClHEeN4K1SUSMBA).
 
 ## Install
 
-To install `JuPedSim` there are a [Quick Guide](2016-11-02-QuickStart.html).
+To install `JuPedSim` there is a [Quick Guide](2016-11-02-QuickStart.html).
 
 
 ## Support 

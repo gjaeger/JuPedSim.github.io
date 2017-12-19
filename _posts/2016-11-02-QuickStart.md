@@ -14,7 +14,7 @@ To install `JuPedSim` there are three steps to follow:
  git clone https://github.com/JuPedSim/JuPedSim.git
 ```
 
-Note: it is very important to update the submodule, otherwise the they will be empty!
+Note: it is very important to update submodules, otherwise the they will be empty!
 
 ```bash
  cd JuPedSim
