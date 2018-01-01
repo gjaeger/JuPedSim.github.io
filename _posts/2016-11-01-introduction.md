@@ -51,26 +51,9 @@ To highlight some features of `JuPedSim` we have uploaded some videos and tutori
 our [YouTube channel](https://www.youtube.com/channel/UCKS8w8CUClHEeN4K1SUSMBA).
 
 
+## Install
 
-## Quick Install
-
-```shell
-git clone https://github.com/JuPedSim/JuPedSim.git
-cd JuPedSim
-git submodule update --init --recursive
-make -f Makefile.cmake check
-```
-
-Note: it is very important to update the submodule, otherwise they will be empty!
-
-
-`CMake` will eventually report any missing packages. Please fix these errors/warnings first **before** proceeding with the compilation of `JuPedSim` with 
-
-```shell
-make -f Makefile.cmake check release
-```
-
-
+To install `JuPedSim` there is a [Quick Guide](2016-11-02-QuickStart.html).
 
 
 
