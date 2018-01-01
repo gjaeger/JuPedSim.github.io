@@ -14,12 +14,6 @@ Open source framework for simulating, analyzing and visualizing  pedestrian dyna
 The primary goal of `JuPedSim` is to provide students and researchers with a framework to investigate pedestrian dynamics
 and  focus on research, i.e. development and validation of new models or model features, analysis of experiments and proper visualization of results. 
 
-<!-- For any scientist and especially for  bachelor/master/PhD students it is important to not loose time in   developing "help tools"  -->
-<!-- e.g. scripts to visualize their results or editing geometries.  -->
-
-<!-- ![timewasting]({{ site.baseurl }}/img/timewasting.png) -->
-
-
 `JuPedSim` is currently focusing on evacuation, but is easily extendable to cover other areas 
 e.g. passengers exchange, commuter traffic in railway stations etc.
 
