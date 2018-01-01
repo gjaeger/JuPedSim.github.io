@@ -5,9 +5,10 @@ subtitle: Jülich pedestrian simulator
 permalink: 2016-11-01-introduction.html
 ---
 
-Open source framework for simulating, analyzing and visualizing  pedestrian dynamics. [![DOI](https://zenodo.org/badge/13744388.svg)](https://zenodo.org/badge/latestdoi/13744388)
+Open source framework for simulating, analyzing and visualizing  pedestrian dynamics. 
+[![DOI](https://zenodo.org/badge/13744388.svg)](https://zenodo.org/badge/latestdoi/13744388)
+![logo](https://github.com/JuPedSim/JuPedSim/raw/master/doc/logo/jupedsim_small.png)
 
-[![logo]](https://github.com/JuPedSim/JuPedSim/raw/master/doc/logo/jupedsim_small.png)
 
 ## Goal
 
@@ -47,7 +48,7 @@ our [YouTube channel](https://www.youtube.com/channel/UCKS8w8CUClHEeN4K1SUSMBA).
 
 ## Install
 
-To install `JuPedSim` there is a [Quick Guide](2016-11-02-QuickStart.html).
+To install `JuPedSim` there is a [Quick Guide](2016-11-02-quickstart.html).
 
 
 
