@@ -37,7 +37,7 @@ You can check your system with
 If the two first steps succeed then you can proceed with the compilation 
 
 ```bash 
-make -f Makefile.cmake
+ make -f Makefile.cmake
 ```
 
 In case of successful compilation,  the executables will be located in the directory `bin/`.

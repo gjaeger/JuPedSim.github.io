@@ -6,7 +6,8 @@ permalink: 2016-11-01-introduction.html
 ---
 
 Open source framework for simulating, analyzing and visualizing  pedestrian dynamics. 
-[![DOI](https://zenodo.org/badge/13744388.svg)](https://zenodo.org/badge/latestdoi/13744388)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.160168.svg)](https://doi.org/10.5281/zenodo.160168)
 ![logo](https://github.com/JuPedSim/JuPedSim/raw/master/doc/logo/jupedsim_small.png)
 
 
