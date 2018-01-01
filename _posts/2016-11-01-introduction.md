@@ -7,29 +7,28 @@ permalink: 2016-11-01-introduction.html
 
 Open source framework for simulating, analyzing and visualizing  pedestrian dynamics. [![DOI](https://zenodo.org/badge/13744388.svg)](https://zenodo.org/badge/latestdoi/13744388)
 
-![logo](https://github.com/JuPedSim/JuPedSim/blob/master/doc/jupedsim_small.png?raw=true)
-
+![logo](https://github.com/JuPedSim/JuPedSim/raw/master/doc/logo/jupedsim_small.png)
 
 ## Goal
 
 The primary goal of `JuPedSim` is to provide students and researchers with a framework to investigate pedestrian dynamics
 and  focus on research, i.e. development and validation of new models or model features, analysis of experiments and proper visualization of results. 
 
-For any scientist and especially for  bachelor/master/PhD students it is important to not loose time in   developing "help tools" 
-e.g. scripts to visualize their results or editing geometries. 
+<!-- For any scientist and especially for  bachelor/master/PhD students it is important to not loose time in   developing "help tools"  -->
+<!-- e.g. scripts to visualize their results or editing geometries.  -->
 
-![timewasting]({{ site.baseurl }}/img/timewasting.png)
+<!-- ![timewasting]({{ site.baseurl }}/img/timewasting.png) -->
 
 
-`JuPedSim` is currently focusing on evacuation, but easily extendable to cover other areas 
+`JuPedSim` is currently focusing on evacuation, but is easily extendable to cover other areas 
 e.g. passengers exchange, commuter traffic in railway stations etc.
 
-Finally, JuPedSim also provides sample data sets for calibration and validation. 
-We are developing some standards and benchmark scenarios for evaluation pedestrian simulations based on a large experimental database, 
-which was established over the last years. See for example 
 
-- [Jülich database](http://www.fz-juelich.de/ias/jsc/EN/Research/ModellingSimulation/CivilSecurityTraffic/PedestrianDynamics/Activities/database/databaseNode.html)
-- [Wuppertal database](http://www.asim.uni-wuppertal.de/datenbank.html)
+<!-- We are developing some standards and benchmark scenarios for evaluation pedestrian simulations based on a large experimental database,  -->
+<!-- which was established over the last years. See for example  -->
+
+<!-- - [Jülich database](http://www.fz-juelich.de/ias/jsc/EN/Research/ModellingSimulation/CivilSecurityTraffic/PedestrianDynamics/Activities/database/databaseNode.html) -->
+<!-- - [Wuppertal database](http://www.asim.uni-wuppertal.de/datenbank.html) -->
 
 
 ## Organization of the code
@@ -62,7 +61,7 @@ git submodule update --init --recursive
 make -f Makefile.cmake check
 ```
 
-Note: it is very important to update the submodule, otherwise the they will be empty!
+Note: it is very important to update the submodule, otherwise they will be empty!
 
 
 `CMake` will eventually report any missing packages. Please fix these errors/warnings first **before** proceeding with the compilation of `JuPedSim` with 
