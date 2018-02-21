@@ -22,13 +22,13 @@ nav:
   permalink: 2016-11-03-requirements.html#top
 ---
 
-In order to compile `JuPedSim` it is necessary to first install the required libraries. 
+In order to compile `JuPedSim` it is necessary to first install the required libraries.
 
 ## Supported compilers
 
-Any compiler with support for C++11. 
+Any compiler with support for C++11.
 
-Tested with   
+Tested with
 
 - `g++` (linux/osx)
 - `clang` (osx)
@@ -53,7 +53,7 @@ Therefore, a compilation of these two packages may not be needed.
 
 ### Install Qt and VTK
 
-Assuming you have [Homebrew](http://brew.sh/). Otherwise, these commands 
+Assuming you have [Homebrew](http://brew.sh/). Otherwise, these commands
 can be slightly adapted to [MacPorts](https://www.macports.org/)
 
 ```
@@ -63,6 +63,13 @@ can be slightly adapted to [MacPorts](https://www.macports.org/)
  # vtk
  brew install vtk --with-qt --without-python --with-python3 --without-boost  --build-from-source
 ```
+
+It may be necessary to link `qt` as follows
+
+```
+echo 'export PATH="/usr/local/opt/qt/bin:$PATH"' >> ~/.bashrc
+```
+(or export to `~/.zshrc` if your are using zsh)
 
 ## Install Boost (at least v1.59)
 
@@ -75,11 +82,11 @@ For `brew` users:
 And for `port` users
 
 ```bash
- sudo port install boost 
+ sudo port install boost
 ```
 
 
-## Linux 
+## Linux
 
 ### Install Qt and VTK  for Linux (Ubuntu, Debian)
 
@@ -99,7 +106,7 @@ You can compile boost using the following snippet:
 ```bash
  boost_version=1.61.0
  boost_dir=boost_1_61_0
- 
+
  wget http://downloads.sourceforge.net/project/boost/boost/${boost_version}/${boost_dir}.tar.gz
  tar xfz ${boost_dir}.tar.gz
  rm ${boost_dir}.tar.gz
@@ -118,13 +125,13 @@ Note: Debian's and Ubuntu's install manager offer an old version of Boost, which
 
 
 
-## Windows 
+## Windows
 
 ### Install Boost (at least v1.59)
 
 ```bash
  bootstrap
- b2  variant=release --build-type=complete 
+ b2  variant=release --build-type=complete
 ```
 
 See also [Getting started on Windows](http://www.boost.org/doc/libs/1_65_1/more/getting_started/windows.html).
@@ -132,10 +139,10 @@ See also [Getting started on Windows](http://www.boost.org/doc/libs/1_65_1/more/
 This [script](https://gitlab.version.fz-juelich.de/jupedsim/jpscore/snippets/18) can be useful, in case you are using
 Visual Studio.
 
-Download it and put it in the same directory as Boost. Depending on your Boost version and VS, 
+Download it and put it in the same directory as Boost. Depending on your Boost version and VS,
 you may want to adapt in the script the variables `boost_dir` and `msvcver`.
 
 
-## Test Boost installation 
+## Test Boost installation
 
 You can test your Boost installation by using this [minimal example](2016-11-04-boost.html).
