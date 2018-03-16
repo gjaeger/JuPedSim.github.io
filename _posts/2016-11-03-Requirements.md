@@ -39,6 +39,7 @@ Tested with
 - cmake: see this [tutorial](https://www.johnlamp.net/cmake-tutorial-1-getting-started.html) for a brief overview.
 - Python3 (highly recommended): needed to plot results and data manipulation.
 - [Boost library](http://www.boost.org/): necessary for `jpscore` and `jpsreport`
+- [CGAL](https://www.cgal.org/)
 - [Qt](https://www.qt.io/): necessary for `jpseditor` and `jpsvis`
 - [VTK](http://www.vtk.org/): necessary for `jpsvis`
 - [Polygon3](https://www.j-raedler.de/projects/polygon/) necessary for `jpsreport`
@@ -51,12 +52,12 @@ Therefore, a compilation of these two packages may not be needed.
 
 ## OSX
 
-### Install Qt and VTK
+### Install Qt, VTK and CGAL
 
 Assuming you have [Homebrew](http://brew.sh/). Otherwise, these commands
 can be slightly adapted to [MacPorts](https://www.macports.org/)
 
-```
+```bash
  brew update
  # qt
  brew install qt
@@ -70,6 +71,9 @@ It may be necessary to link `qt` as follows
 echo 'export PATH="/usr/local/opt/qt/bin:$PATH"' >> ~/.bashrc
 ```
 (or export to `~/.zshrc` if your are using zsh)
+
+See [here](https://www.cgal.org/download/macosx.html) for CGAL installation.
+
 
 ## Install Boost (at least v1.59)
 
@@ -90,7 +94,7 @@ And for `port` users
 
 ### Install Qt and VTK  for Linux (Ubuntu, Debian)
 
-```
+```bash
  sudo apt-get install qt5-default qttools5-dev-tools
  sudo apt-get install libvtk5-dev libvtk5.8-qt4 python-vtk libvtk-java
 ```
@@ -98,6 +102,9 @@ And for `port` users
 Alternatively, you can download the latest version of QT [here](https://www.qt.io/download/)
 and the latest version of VTK [here](http://www.vtk.org/download/) and compile them manually.
 
+### Install CGAL
+
+See [here](https://www.cgal.org/download/linux.htmlhttps://www.cgal.org/download/linux.html) for installation instructions.
 
 ### Install Boost (at least v1.59)
 

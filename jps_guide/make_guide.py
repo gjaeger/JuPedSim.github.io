@@ -21,7 +21,7 @@ def clean_file(filename, img_dir):
     f =  open(filename, "r")
     lines = f.readlines()
     if not len(lines):
-        print ("WARNING: can not read file ", filename)
+        print("WARNING: can not read file ", filename)
         input("pause")
 
     add_line = 0  # condition when to start adding new lines
