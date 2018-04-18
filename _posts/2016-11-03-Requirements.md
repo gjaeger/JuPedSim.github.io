@@ -52,26 +52,40 @@ Therefore, a compilation of these two packages may not be needed.
 
 ## OSX
 
-### Install Qt, VTK and CGAL
-
 Assuming you have [Homebrew](http://brew.sh/). Otherwise, these commands
-can be slightly adapted to [MacPorts](https://www.macports.org/)
+can be slightly adapted to [MacPorts](https://www.macports.org/) users.
+
+### Install Qt
 
 ```bash
  brew update
- # qt
  brew install qt
- # vtk
- brew install vtk --with-qt --without-python --with-python3 --without-boost  --build-from-source
 ```
 
-It may be necessary to link `qt` as follows
+It may be necessary to link `qt` as follows:
 
+- Find the location of qmake
+
+```bash
+find / -name qmake
 ```
-echo 'export PATH="/usr/local/opt/qt/bin:$PATH"' >> ~/.bashrc
+
+- then export the path to ~/.bashrc, ~/.zshrc or ~/.bash_profile. For example:
+
+bash
+```
+echo 'export PATH=/path/to/qt/bin:$PATH"' >> ~/.bashrc
 ```
 (or export to `~/.zshrc` if your are using zsh)
 
+
+### Install VTK
+
+```bash
+ brew install vtk --with-qt --without-python --with-python3 --without-boost  --build-from-source
+```
+
+### Install CGAL
 See [here](https://www.cgal.org/download/macosx.html) for CGAL installation.
 
 
