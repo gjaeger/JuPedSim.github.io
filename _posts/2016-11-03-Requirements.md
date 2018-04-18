@@ -65,16 +65,15 @@ can be slightly adapted to [MacPorts](https://www.macports.org/) users.
 It may be necessary to link `qt` as follows:
 
 - Find the location of qmake
+```bash
+ find / -name qmake
+```
+
+- then export the path to `~/.bashrc`, `~/.zshrc` or `~/.bash_profile`. For example:
+
 
 ```bash
-find / -name qmake
-```
-
-- then export the path to ~/.bashrc, ~/.zshrc or ~/.bash_profile. For example:
-
-bash
-```
-echo 'export PATH=/path/to/qt/bin:$PATH"' >> ~/.bashrc
+ echo 'export PATH=/path/to/qt/bin:$PATH"' >> ~/.bashrc
 ```
 (or export to `~/.zshrc` if your are using zsh)
 
@@ -105,8 +104,9 @@ And for `port` users
 
 
 ## Linux
+The instructions are for Ubuntu (and Debian)
 
-### Install Qt and VTK  for Linux (Ubuntu, Debian)
+### Install Qt and VTK
 
 ```bash
  sudo apt-get install qt5-default qttools5-dev-tools
