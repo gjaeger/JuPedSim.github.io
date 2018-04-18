@@ -70,8 +70,6 @@ It may be necessary to link `qt` as follows:
 ```
 
 - then export the path to `~/.bashrc`, `~/.zshrc` or `~/.bash_profile`. For example:
-
-
 ```bash
  echo 'export PATH=/path/to/qt/bin:$PATH"' >> ~/.bashrc
 ```
