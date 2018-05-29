@@ -20,7 +20,7 @@ def clean_file(filename, img_dir):
 
     f =  open(filename, "r")
     lines = f.readlines()
-    if not len(lines):
+    if not lines:
         print("WARNING: can not read file ", filename)
         input("pause")
 
@@ -28,12 +28,12 @@ def clean_file(filename, img_dir):
     newlines = [] # new lines will be written in filename
 
     for line in lines:
-        # look for first appearance of "---"
-        if not add_line and line.startswith("---"):
-            add_line = 1
+        # look for first and second appearance of "---"
+        if add_line != 2 and line.startswith("---"):
+            add_line += 1
             continue # ignore this line
 
-        if add_line:
+        if add_line == 2:
             # fix image urls. Replace "{{ base.url }}" with pwd.
             line = re.sub(r"\{\{\s* site.baseurl \s*\}\}", img_dir, line)
             newlines.append(line)

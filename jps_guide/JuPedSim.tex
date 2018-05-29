@@ -1,10 +1,10 @@
 % **************************************************
 % % Clean Thesis
 % % -- A LaTeX Style for Thesis Documents --
-% % 
+% %
 % % Copyright (C) 2011-2013 Ricardo Langner
 % % **************************************************
-% % 
+% %
 % % Readme:
 % % ----------------------------------------
 % % *** Clean, Simple, Elegant ***
@@ -12,21 +12,21 @@
 % % for my diplom thesis (Diplomarbeit). The style can be understood
 % % as my personal compromise - a typical clean looking scientific
 % % document combined and polished with minor beautifications.
-% % 
+% %
 % % The design of this "Clean Thesis" style is inspired
 % % by user guide documents from Apple Inc.
-% % 
+% %
 % % Note: If you are looking for an exact and correct style regarding
 % % typographic rules, please have a look at the "Classic Thesis Style"
 % % (see http://www.miede.de/index.php?page=classicthesis).
-% % 
+% %
 % % *** Donation = Postcard ***
 % % Based on the idea of Andr\'e Miede: If you like the "Clean Thesis"
 % % style I would be very pleased about a donation in the form of a
 % % POSTCARD. You can find my address in the file Clean-Thesis.pdf.
 % % I am going to collect all postcards and exhibit them at the website
 % % I mentioned.
-% % 
+% %
 % % *** Idea and Inspiration ***
 % % The idea of providing my customized style for thesis documents
 % % passed through my mind while writing my own thesis. Motivated and
@@ -35,20 +35,20 @@
 % % (thanks to Andr\'e for doing a great job) I decided to collect all
 % % design and style related functionality in a separate LaTeX style and
 % % provide this style to other thesis writers.
-% % 
-% % 
+% %
+% %
 % % License Information:
 % % ----------------------------------------
 % % "Clean Thesis" is free software: you can redistribute it and/or modify
 % % it under the terms of the GNU General Public License as published by
 % % the Free Software Foundation, either version 3 of the License, or
 % % (at your option) any later version.
-% % 
+% %
 % % "Clean Thesis" is distributed in the hope that it will be useful,
 % % but WITHOUT ANY WARRANTY; without even the implied warranty of
 % % MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 % % GNU General Public License for more details.
-% % 
+% %
 % % You should have received a copy of the GNU General Public License
 % % along with this program.  If not, see <http://www.gnu.org/licenses/>.
 % % **************************************************
@@ -89,8 +89,8 @@ draft=false,				% value for draft version
 \newcommand{\thesisTitle}{JuPedSim User Guide}
 \newcommand{\thesisName}{Mohcine Chraibi, Jun Zhang}
 \newcommand{\thesisSubject}{Documentation}
-\newcommand{\thesisDate}{April 7, 2014}
-\newcommand{\Version}{0.8.2}
+\newcommand{\thesisDate}{May 29, 2018}
+\newcommand{\Version}{0.8.3}
 
 
 \newcommand{\thesisUniversity}{\protect{Clean Thesis Style University}}
@@ -133,7 +133,7 @@ draft=false,				% value for draft version
   deletekeywords={...},            % if you want to delete keywords from the given language
   escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
   extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
-  frame=single,	                   % adds a frame around the code
+  frame=single,                    % adds a frame around the code
   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
   keywordstyle=\color{blue},       % keyword style
   language=xml,                 % the language of the code
@@ -147,7 +147,7 @@ draft=false,				% value for draft version
   showtabs=false,                  % show tabs within strings adding particular underscores
   stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
   stringstyle=\color{mymauve},     % string literal style
-  tabsize=2,	                   % sets default tabsize to 2 spaces
+  tabsize=2,                       % sets default tabsize to 2 spaces
   title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
 \usepackage[					% clean thesis style
@@ -161,13 +161,13 @@ colortheme=bluemagenta,%
 ]{cleanthesis}
 
 \hypersetup{					% setup the hyperref-package options
-  pdftitle={\thesisTitle},	% 	- title (PDF meta)
-  pdfsubject={\thesisSubject},% 	- subject (PDF meta)
-  pdfauthor={\thesisName},	% 	- author (PDF meta)
-  plainpages=false,			% 	- 
-  colorlinks=true,			% 	- colorize links?
-  pdfborder={0 0 0},			% 	-
-  breaklinks=true,			% 	- allow line break inside links
+  pdftitle={\thesisTitle},	%       - title (PDF meta)
+  pdfsubject={\thesisSubject},%         - subject (PDF meta)
+  pdfauthor={\thesisName},	%       - author (PDF meta)
+  plainpages=false,			%       -
+  colorlinks=true,			%       - colorize links?
+  pdfborder={0 0 0},			%       -
+  breaklinks=true,			%       - allow line break inside links
   bookmarksnumbered=true,		%
   bookmarksopen=true			%
 }
@@ -188,7 +188,7 @@ colortheme=bluemagenta,%
 % Front matter
 % --------------------------
 \pagenumbering{arabic}			% roman page numbing (invisible for empty page style)
-\pagestyle{plain}	
+\pagestyle{plain}
 % \pagestyle{fancy}
 % \fancyhf{}
 % \fancyhead[LE,RO]{JuPedSim}
@@ -219,9 +219,9 @@ JuPedSim specifically disclaims any warranties, including, but not limited to, t
 % circumstances. Lack of accurate predictions by the models could lead to erroneous
 % conclusions with regard of life safety.
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduction}
 \input{_tex/jpscore/2016-11-01-introduction.tex}
 % \section{Quickstart}
@@ -241,7 +241,7 @@ JuPedSim specifically disclaims any warranties, including, but not limited to, t
  \chapter{JPScore}
 \section{File formats}
 \texttt{jpscore} needs as input an ``inifile'' and a geometry file. B successful simulation it produces a trajectory file.
- 
+
 \subsection{Inifile}
 \input{_tex/jpscore/2016-11-01-inifile.tex}
 \newpage
