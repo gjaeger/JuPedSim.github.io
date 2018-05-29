@@ -6,7 +6,7 @@ permalink: 2016-11-02-quickstart.html
 ---
 
 
-To install `JuPedSim` there are three steps to follow: 
+To install `JuPedSim` there are three steps to follow:
 
 # 1. Get the code
 
@@ -14,19 +14,19 @@ To install `JuPedSim` there are three steps to follow:
  git clone https://github.com/JuPedSim/JuPedSim.git
 ```
 
-Note: it is very important to update submodules, otherwise the they will be empty!
+Note: it is very important to update submodules, otherwise they will be empty!
 
 ```bash
  cd JuPedSim
  git submodule update --init --recursive
 ```
 
-# 2. Check the requirements 
+# 2. Check the requirements
 Some packages and libraries are required to get `JuPedSim` compiled. See also [requirements](2016-11-03-requirements.html).
 
-You can check your system with 
+You can check your system with
 
-```bash 
+```bash
  make -f Makefile.cmake check
 ```
 
@@ -34,9 +34,9 @@ You can check your system with
 
 # 3. Compile the code
 
-If the two first steps succeed then you can proceed with the compilation 
+If the two first steps succeed then you can proceed with the compilation
 
-```bash 
+```bash
  make -f Makefile.cmake
 ```
 

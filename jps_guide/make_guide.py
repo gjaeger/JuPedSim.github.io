@@ -29,9 +29,16 @@ def clean_file(filename, img_dir):
 
     for line in lines:
         # look for first and second appearance of "---"
-        if add_line != 2 and line.startswith("---"):
+        # ---
+        # \end{itemize}
+         # the last itemize  is stange indeed.
+        if add_line == 0 and line.startswith("---"):
             add_line += 1
             continue # ignore this line
+
+        if add_line == 1:
+            add_line += 1
+            continue # ignore following line.
 
         if add_line == 2:
             # fix image urls. Replace "{{ base.url }}" with pwd.
@@ -49,17 +56,7 @@ def get_git_status():
     Fetch information of the last git commit.
             :return: branch, author, date, commit of the newst commit(tuple)
     """
-    ## Get the branch name by `git status` command
-    branch = subprocess.check_output(["git", "status"]).splitlines()[0].split(' ')[-1]
-
-    ## Get the commit, author und date name by `git show` command
-    git_status = subprocess.check_output(["git", "show", "--pretty=medium"])
-    commit = git_status.split("\n")[0].split(' ')[1]
-    author = git_status.split('\n')[1]
-    date = git_status.split('\n')[2]
-
-    return branch, author, date, commit
-
+    # TODO
 
 if __name__ == "__main__":
     if not os.path.exists("_tex"):

@@ -17,11 +17,16 @@ def clean_file(filename):
             print(add_line)
             continue # ignore this line
 
+        if add_line == 1:
+            add_line += 1
+            continue # ignore following line.
+
+
         if add_line == 2:
             # fix image urls. Replace "{{ base.url }}" with pwd.
-            print( line)
+            print("line <%s>"%line)
             line = re.sub(r"\{\{\s* site.baseurl \s*\}\}", os.getcwd(), line)
-            print( line)
+            print("line <%s>"%line)
             newlines.append(line)
 
 
