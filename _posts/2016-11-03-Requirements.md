@@ -2,7 +2,6 @@
 layout: post2
 title: Requirements
 subtitle: Dependencies of JuPedSim
-#bigimg: /img/jupedsim_small.png
 permalink: 2016-11-03-requirements.html
 nav:
 - page: Supported compilers
@@ -17,10 +16,10 @@ nav:
   permalink: 2016-11-03-requirements.html#windows
 - page: Test Boost
   permalink: 2016-11-03-requirements.html#test-boost-installation
-
 - page: Back to top
   permalink: 2016-11-03-requirements.html#top
 ---
+
 
 In order to compile `JuPedSim` it is necessary to first install the required libraries.
 
@@ -145,6 +144,12 @@ Note: Debian's and Ubuntu's install manager offer an old version of Boost, which
 
 
 ## Windows
+
+Installing and managing these libraries on Windows can be a real hassle.
+Fortunately, there is a nice package manager for C++ libraries that you might want to try.
+
+See [here](2018-06-05-vcpkg.html) for more details.
+Otherwise, you can continue reading..
 
 ### Install Boost (at least v1.59)
 

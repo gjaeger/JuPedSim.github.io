@@ -17,6 +17,7 @@ To install `JuPedSim` there are three steps to follow:
 
 - Check the requirements
   Some packages and libraries are required to get `JuPedSim` compiled. See also [requirements](2016-11-03-requirements.html).
+
   You can check your system with
   ```bash
    make -f Makefile.cmake check
