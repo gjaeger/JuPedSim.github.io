@@ -1,1 +1,6 @@
 _site
+_tex
+auto
+*.bib
+.jekyll-metadata
+guide
