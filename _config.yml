@@ -27,7 +27,7 @@ description: Simulating pedestrians with state of the art models
 
 # List of links in the navigation bar
 navbar-links:
-  Packages: 
+  Packages:
     - JPScore: "http://jupedsim.github.io/jpscore/"
     - JPSreport: "http://jupedsim.github.io/jpsreport"
     - JPSeditor: "jpseditor"
@@ -36,7 +36,7 @@ navbar-links:
     - GitLab: "http://gitlab.version.fz-juelich.de/jupedsim/"
     - GitHub: "https://github.com/JuPedSim"
     - Release: "https://github.com/JuPedSim/JuPedSim/releases"
-    - Docker: "https://hub.docker.com/r/jupedsim/" 
+    - Docker: "https://hub.docker.com/r/jupedsim/"
   Disclaimer: "disclaimer"
 
 # Image to show in the navigation bar - image must be a square (width = height)
@@ -198,9 +198,6 @@ prose:
           label: "Publish"
           help: "Check to publish post, uncheck to hide."
 
-gems:
-  - jekyll-paginate
-  - jekyll-pandoc
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
