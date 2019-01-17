@@ -5,8 +5,12 @@ subtitle: Compiling the code
 permalink: 2016-11-02-quickstart.html
 ---
 
+## Windows
 
-To install `JuPedSim` there are three steps to follow:
+See [this tutorial with VS](http://www.jupedsim.org/jpscore/2018-10-21-windows)
+
+## Linux and MacOS
+To compile `JuPedSim` there are three steps to follow:
 
 - Get the code
   ```bash
@@ -32,6 +36,68 @@ To install `JuPedSim` there are three steps to follow:
 In case of successful compilation,  the executables will be located in the directory `bin/`.
 
 Alternatively, you can try to compile the different modules separately, which allows more control on the process and helps tackle eventual compilation problems easily.
+
+## Homebrew installation
+
+Homebrew users can install all packages with the following commands:
+
+
+### Add tap
+
+First, add jupedsim's tap
+
+```bash
+brew tap JuPedSim/jps
+```
+(this is done once)
+
+### (optional) Check dependencies
+
+First check the dependencies of the packages you want to install
+
+```shell
+brew info <pkg>
+```
+
+with `<pkg>` is one of the available modules:
+
+- `jpseditor`: geometry editor
+- `jpscore`: simulation
+- `jpsreport`: analysis
+- `jpsvis`: visualisation
+
+### Install
+
+then install with
+
+```shell
+brew install --HEAD <pkg>
+```
+
+### (optional) Test modules
+
+```shell
+brew test  <pkg>
+```
+
+### Update module
+
+To update the installed packages use
+
+```shell
+brew upgrade <pkg>
+```
+
+or reinstall it with
+
+```shell
+brew reinstall <pkg>
+```
+
+```bach
+brew install --HEAD jpsvis
+```
+
 
 ## JPScore
 Following options for `cmake` can be defined
