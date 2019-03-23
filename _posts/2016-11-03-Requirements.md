@@ -101,13 +101,23 @@ And for `port` users
 
 
 ## Linux
-The instructions are for Ubuntu (and Debian)
+The instructions are for Ubuntu, Debian and Manjaro
 
 ### Install Qt and VTK
+
+- Ubuntu (Debian)
 
 ```bash
  sudo apt-get install qt5-default
  sudo apt-get install libvtk6-dev
+```
+
+- Manjaro
+
+```
+bash
+sudo pacman -Sy qt5
+sudo pacman -Sy vtk
 ```
 
 Alternatively, you can download the latest version of QT [here](https://www.qt.io/download/)
