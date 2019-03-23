@@ -106,8 +106,8 @@ The instructions are for Ubuntu (and Debian)
 ### Install Qt and VTK
 
 ```bash
- sudo apt-get install qt5-default qttools5-dev-tools
- sudo apt-get install libvtk5-dev libvtk5.8-qt4 python-vtk libvtk-java
+ sudo apt-get install qt5-default
+ sudo apt-get install libvtk6-dev
 ```
 
 Alternatively, you can download the latest version of QT [here](https://www.qt.io/download/)
@@ -143,12 +143,14 @@ Note: Debian's and Ubuntu's install manager offer an old version of Boost, which
 
 
 
-## Windows
+## Windows (10)
 
 Installing and managing these libraries on Windows can be a real hassle.
 Fortunately, there is a nice package manager for C++ libraries that you might want to try.
 
 See [here](2018-06-05-vcpkg.html) for more details.
+
+
 Otherwise, you can continue reading..
 
 ### Install Boost (at least v1.59)
