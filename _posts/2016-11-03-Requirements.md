@@ -31,14 +31,20 @@ Tested with
 
 - `g++` (linux/osx)
 - `clang` (osx)
-- Visual Studio 2013 (Windows)
+- Visual Studio 2017 (Windows)
+
+`JPScore` and `JPSreport` use some functionalities of C++17.
+Therefore you need a compiler that supports C++17.
+
+
+
 
 ## Required tools and libraries
 
 - cmake: see this [tutorial](https://www.johnlamp.net/cmake-tutorial-1-getting-started.html) for a brief overview.
 - Python3 (highly recommended): needed to plot results and data manipulation.
 - [Boost library](http://www.boost.org/): necessary for `jpscore` and `jpsreport`
-- [CGAL](https://www.cgal.org/)
+- [CGAL](https://www.cgal.org/) (optional)
 - [Qt](https://www.qt.io/): necessary for `jpseditor` and `jpsvis`
 - [VTK](http://www.vtk.org/): necessary for `jpsvis`
 - [Polygon3](https://www.j-raedler.de/projects/polygon/) necessary for `jpsreport`
@@ -85,7 +91,7 @@ It may be necessary to link `qt` as follows:
 See [here](https://www.cgal.org/download/macosx.html) for CGAL installation.
 
 
-## Install Boost (at least v1.59)
+### Install Boost (at least v1.59)
 
 For `brew` users:
 

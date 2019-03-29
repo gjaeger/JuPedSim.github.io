@@ -7,47 +7,64 @@ permalink: 2016-11-02-quickstart.html
 
 ## Windows
 
-See [this tutorial with VS](http://www.jupedsim.org/jpscore/2018-10-21-windows)
+We recommend to use Visual Studio 2017. See [this tutorial with VS](http://www.jupedsim.org/jpscore/2018-10-21-windows)
 
 ## Linux and MacOS
-To compile `JuPedSim` there are three steps to follow:
 
-- Get the code
-  ```bash
-   git clone https://github.com/JuPedSim/JuPedSim.git
-   cd JuPedSim
-   git submodule update --init --recursive
-  ```
+Before compilation check the [requirements](2016-11-03-requirements.html).
 
-- Check the requirements
-  Some packages and libraries are required to get `JuPedSim` compiled. See also [requirements](2016-11-03-requirements.html).
+`JPScore` and `JPSreport` use some functionalities of C++17.
+Therefore you need a compiler that supports C++17.
 
-  You can check your system with
-  ```bash
-   make -f Makefile.cmake check
-  ```
-  `CMake` will eventually report any missing packages. Please fix these errors/warnings first **before** proceeding with the compilation of `JuPedSim`.
+For `JPSvis` under MacOSX it is necessary to use `AppleClang`.
 
-- Compile the code
-  If the two first steps succeed then you can proceed with the compilation
-  ```bash
-   make -f Makefile.cmake
-  ```
-In case of successful compilation,  the executables will be located in the directory `bin/`.
+- Git clone the code of the package you want to compile, e.g., `jpsvis`
 
-Alternatively, you can try to compile the different modules separately, which allows more control on the process and helps tackle eventual compilation problems easily.
+```shell
+ git clone h1ttps://gitlab.version.fz-juelich.de/jupedsim/jpsvis
+```
+- Run cmake:
+
+```shell
+ cd jpsvis
+ mkdir build
+ cd build
+ cmake ..
+```
+
+<div class="alert alert-info">
+  <strong>Note: </strong> `JPScore` and `JPSreport` use some functionalities of C++17. Therefore you need a compiler that supports C++17. Eventually you may need to call `cmake` as follows:
+</div>
+
+```shell
+ cmake -DCMAKE_CXX_COMPILER=g++-8 ..
+```
+
+or you can point `cmake` to an appropriate compiler supporting C++17.
+
+`JPSvis` however, under MacOSX needs to be compiled with the native `AppleClang`.
+
+
+
+- If cmake runs without errors, compile
+
+```shell
+ make
+```
+
+An executable will be found in `./bin`
+
 
 ## Homebrew installation
 
 Homebrew users can install all packages with the following commands:
-
 
 ### Add tap
 
 First, add jupedsim's tap
 
 ```bash
-brew tap JuPedSim/jps
+ brew tap JuPedSim/jps
 ```
 (this is done once)
 
@@ -56,7 +73,7 @@ brew tap JuPedSim/jps
 First check the dependencies of the packages you want to install
 
 ```shell
-brew info <pkg>
+ brew info <pkg>
 ```
 
 with `<pkg>` is one of the available modules:
@@ -71,13 +88,13 @@ with `<pkg>` is one of the available modules:
 then install with
 
 ```shell
-brew install --HEAD <pkg>
+ brew install --HEAD <pkg>
 ```
 
 ### (optional) Test modules
 
 ```shell
-brew test  <pkg>
+ brew test  <pkg>
 ```
 
 ### Update module
@@ -85,21 +102,18 @@ brew test  <pkg>
 To update the installed packages use
 
 ```shell
-brew upgrade <pkg>
+ brew upgrade <pkg>
 ```
 
 or reinstall it with
 
 ```shell
-brew reinstall <pkg>
-```
-
-```bach
-brew install --HEAD jpsvis
+ brew reinstall <pkg>
 ```
 
 
-## JPScore
+
+###  JPScore
 Following options for `cmake` can be defined
 
 - `-DCMAKE_CXX_COMPILER=compiler` (e.g. clang++ or g++)
