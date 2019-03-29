@@ -20,39 +20,39 @@ For `JPSvis` under MacOSX it is necessary to use `AppleClang`.
 
 - Git clone the code of the package you want to compile, e.g., `jpsvis`
 
-```shell
- git clone h1ttps://gitlab.version.fz-juelich.de/jupedsim/jpsvis
-```
+ ```shell
+  git clone https://gitlab.version.fz-juelich.de/jupedsim/jpsvis
+ ```
 - Run cmake:
 
-```shell
- cd jpsvis
- mkdir build
- cd build
- cmake ..
-```
+ ```shell
+  cd jpsvis
+  mkdir build
+  cd build
+  cmake ..
+ ```
 
-<div class="alert alert-info">
-  <strong>Note: </strong> `JPScore` and `JPSreport` use some functionalities of C++17. Therefore you need a compiler that supports C++17. Eventually you may need to call `cmake` as follows:
-</div>
+ <div class="alert alert-info">
+ <strong>Note: </strong> JPScore and JPSreport use some functionalities of C++17. Therefore you need a compiler   that supports C++17. Eventually you may need to call cmake as follows:
+  </div>
 
-```shell
- cmake -DCMAKE_CXX_COMPILER=g++-8 ..
-```
+ ```shell
+  cmake -DCMAKE_CXX_COMPILER=g++-8 ..
+ ```
 
-or you can point `cmake` to an appropriate compiler supporting C++17.
+ or you can point `cmake` to an appropriate compiler supporting C++17.
 
-`JPSvis` however, under MacOSX needs to be compiled with the native `AppleClang`.
+ `JPSvis` however, under MacOSX needs to be compiled with the native `AppleClang`.
 
 
 
 - If cmake runs without errors, compile
 
-```shell
- make
-```
+ ```shell
+  make
+ ```
 
-An executable will be found in `./bin`
+ An executable will be found in `./bin`
 
 
 ## Homebrew installation
