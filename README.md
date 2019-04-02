@@ -32,19 +32,21 @@ To create the pdf file the following requirements are needed:
 - Python
 
 
-### Steps
+### Steps to PDF
 
 The pdf file is created by converting the markdown files to tex files.
 These are processed by `xelatex` to a single file called `JuPedSim.pdf`.
 
-- Move the [post-checkout](post-checkout) file in `.git/hooks/` and make it executable (`chmod +x`). This hook creates the title page with some git metadata.
-
+- clean repository i.e.,
+  - `git push` if you have any changes,
+  -  `git pull` to be up to date.
 - `cd jps_guide`
 - `python make_guide.py`
   This script performs the following actions:
   - create `_tex`-directory
   - convert md-files to tex-files
   - cleanup tex-files by removing md-header
+  - make sure post-commit hook is copied in the right place and made executable
   - run `git checkout master` to produce titlepage
   - run `make` to produce pdf file
 

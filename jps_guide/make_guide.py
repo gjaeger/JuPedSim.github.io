@@ -6,11 +6,13 @@
 # - latex
 # - make
 #======================================
+import sys
 import glob
 import os
 import re
 import shlex
 import subprocess
+from shutil import copyfile
 
 def clean_file(filename, img_dir):
     """
@@ -85,9 +87,28 @@ if __name__ == "__main__":
             clean_file(latex_file, img_dir)
 
 
-# create titlepage
 
-make_title_page = "git checkout master"
-res = subprocess.call(shlex.split(make_title_page))
-# process jupedsim.tex
-subprocess.call("make")
+    post_checkout = "../.git/hooks/post-checkout"
+    if not os.path.exists(post_checkout):
+        print("copy <post-checkout> to <../.git/hooks>")
+        copyfile("../post-checkout", post_checkout)
+
+    # make file executable
+    print("change permission of <post-checkout>")
+    os.chmod(post_checkout, 0o775)
+
+    # remove old titlepage.tex
+    if os.path.exists("./titlepage.tex"):
+        print("remove titlepage")
+        os.remove("./titlepage.tex")
+
+    # create titlepage
+    make_title_page = "git checkout master"
+    res = subprocess.call(shlex.split(make_title_page))
+
+    if not os.path.exists("./titlepage.tex"):
+        sys.exit("could not find titlepage.tex. git checkout was not successful!")
+
+    # process jupedsim.tex
+    res = subprocess.call(shlex.split("make clean"))
+    subprocess.call("make")
