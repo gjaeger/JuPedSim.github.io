@@ -1,0 +1,49 @@
+#!/bin/sh
+# make changes for jpscore and jpsreport
+# -----------------------------------------------------
+#
+guide=`pwd`
+echo "Hier: $PWD, $guide"
+cd ../jpscore/
+echo "Hier: $PWD, $guide"
+FIRSTTAG=$(git describe origin/master --tags --always  2>/dev/null)
+git --no-pager log -1 --date=short --decorate=short \
+    --pretty=format:"
+%% this file is generatred automatically. All manual changes will be deleted by next git checkout
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\begin{titlepage}
+\begin{center}
+
+\includegraphics[width=0.75\textwidth]{img/jupedsim_small.png} \\\\ [1cm]
+
+\textsc{\LARGE Jülich Pedestrian Simulator} \\\\ [1.5cm]
+
+\textsc{\small Forschungszentrum Jülich GmbH} \\\\ [0.5cm]
+
+\HRule \\\\ [0.4cm]
+{ \huge \bfseries User's Guide Version \Version} \\\\ [0.4cm]
+
+
+\HRule \\\\ [1.5cm]
+
+{\large Stand: \today}
+\end{center}
+%>>>>>>>>>>>>>
+\vfill
+\vfill
+\begin{minipage}{0.8\textwidth}
+    \begin{flushleft} \large
+      \color{gray}{\sffamily jpscore \hspace{0.22cm} \textbullet~{$FIRSTTAG} ({%cd})}
+    " origin/master > $guide/jps_guide/titlepage.tex
+
+
+cd ../jpsreport/
+echo "Hier: $PWD, $guide"
+FIRSTTAG=$(git describe --tags --always  origin/master 2>/dev/null)
+git --no-pager log -1 --date=short --decorate=short \
+    --pretty=format:"
+        \color{gray}{\sffamily jpsreport \textbullet~{$FIRSTTAG} ({%cd})}
+        \end{flushleft}
+        \end{minipage}
+        \end{titlepage}
+    " origin/master >> $guide/jps_guide/titlepage.tex

@@ -11,7 +11,6 @@ import os
 import re
 import shlex
 import subprocess
-import shutil
 
 def clean_file(filename, img_dir):
     """
@@ -86,5 +85,9 @@ if __name__ == "__main__":
             clean_file(latex_file, img_dir)
 
 
+# create titlepage
+
+make_title_page = "git checkout master"
+res = subprocess.call(shlex.split(make_title_page))
 # process jupedsim.tex
-subprocess.Popen("make")
+subprocess.call("make")

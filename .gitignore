@@ -4,3 +4,5 @@ auto
 *.bib
 .jekyll-metadata
 guide
+titlepage.tex
+JuPedSim.pdf

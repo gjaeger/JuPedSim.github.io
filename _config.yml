@@ -18,7 +18,7 @@ title: JuPedSim
 
 # version of the release
 
-version: '0.8.2'
+version: '0.8.3'
 
 # Short description of your site
 description: Simulating pedestrians with state of the art models
@@ -152,6 +152,7 @@ exclude:
   - README.md
   - CNAME
   - Vagrantfile
+  - post-checkout
 
 # prose.io config
 prose:
