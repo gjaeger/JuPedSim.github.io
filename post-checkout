@@ -1,11 +1,10 @@
 #!/bin/sh
-# make changes for jpscore and jpsreport
+# get git-info from jpscore and jpsreport
+# --> create $guide/jps_guide/titlepage.tex
 # -----------------------------------------------------
-#
+
 guide=`pwd`
-echo "Hier: $PWD, $guide"
 cd ../jpscore/
-echo "Hier: $PWD, $guide"
 FIRSTTAG=$(git describe origin/master --tags --always  2>/dev/null)
 git --no-pager log -1 --date=short --decorate=short \
     --pretty=format:"
@@ -38,7 +37,6 @@ git --no-pager log -1 --date=short --decorate=short \
 
 
 cd ../jpsreport/
-echo "Hier: $PWD, $guide"
 FIRSTTAG=$(git describe --tags --always  origin/master 2>/dev/null)
 git --no-pager log -1 --date=short --decorate=short \
     --pretty=format:"
