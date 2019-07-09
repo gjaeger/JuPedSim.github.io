@@ -2,6 +2,7 @@
 layout: post
 title: Quick start
 subtitle: Compiling the code
+update: 2019-07-09
 permalink: 2016-11-02-quickstart.html
 ---
 
@@ -18,10 +19,10 @@ Therefore you need a compiler that supports C++17.
 
 For `JPSvis` under MacOSX it is necessary to use `AppleClang`.
 
-- Git clone the code of the package you want to compile, e.g., `jpsvis`
+- Git clone the code of the package you want to compile, e.g., `jpscore`
 
  ```shell
-  git clone https://gitlab.version.fz-juelich.de/jupedsim/jpsvis
+  git clone https://github.com/JuPedSim/jpscore.git
  ```
 - Run cmake:
 

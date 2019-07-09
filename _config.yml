@@ -33,7 +33,6 @@ navbar-links:
     - JPSeditor: "jpseditor"
     - JPSvis: "jpsvis"
   Resources:
-    - GitLab: "http://gitlab.version.fz-juelich.de/jupedsim/"
     - GitHub: "https://github.com/JuPedSim"
     - Release: "https://github.com/JuPedSim/JuPedSim/releases"
     - Docker: "https://hub.docker.com/r/jupedsim/"
